@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
+import './register-form.styles.css';
 import { CustomInput, CustomSelect } from './fields/index';
 import { required, minLength, maxLength } from './validation';
 
