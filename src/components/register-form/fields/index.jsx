@@ -1,11 +1,12 @@
 import React from 'react';
-import ReactJson from 'react-json-view';
 
-export const CustomInput = props => (
+export const CustomInput = ({ input, meta, label, type }) => (
   <div>
-    <label>{props.label}</label>
-    <input type={props.type} {...props.input} />
-    <ReactJson src={props} />
+    <label>{label}</label>
+    <input type={type} {...input} />
+    {meta.touched && meta.error && (
+      <div style={{ color: 'red' }}>{meta.error}</div>
+    )}
   </div>
 );
 
