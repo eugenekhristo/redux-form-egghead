@@ -1,9 +1,11 @@
 import React from 'react';
+import ReactJson from 'react-json-view';
 
 export const CustomInput = props => (
   <div>
     <label>{props.label}</label>
     <input type={props.type} {...props.input} />
+    <ReactJson src={props} />
   </div>
 );
 
