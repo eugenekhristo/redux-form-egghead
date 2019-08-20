@@ -1,8 +1,17 @@
 export const required = value => (value ? undefined : 'This field is required');
+
 export const minLength = value =>
   value.length <= 3 ? 'This field must be more than 3 chars' : undefined;
+
 export const maxLength = value =>
   value.length >= 10 ? 'This field must be less than 10 chars' : undefined;
+
+export const matchesPasswords = (value, values) =>
+  value === values.password ? undefined : 'Passwords must match';
+
+// export const matchesPasswords = (value, values) => {
+//   console.log(value, values);
+// };
 
 // export const validate = values => {
 //   const errors = {};
