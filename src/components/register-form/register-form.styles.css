@@ -117,3 +117,19 @@ button[type='submit'] {
   left: 20px;
   top: -8px;
 }
+
+@keyframes gray-pulse {
+  0% {
+    border-color: gray;
+  }
+  50% {
+    border-color: #eee;
+  }
+  100% {
+    border-color: gray;
+  }
+}
+
+.async-validating input {
+  animation: gray-pulse 1s infinite;
+}

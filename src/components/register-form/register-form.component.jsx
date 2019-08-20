@@ -3,6 +3,7 @@ import { Field, reduxForm } from 'redux-form';
 import './register-form.styles.css';
 import { CustomInput, CustomSelect } from './fields/index';
 import { required, minLength, maxLength, matchesPasswords } from './validation';
+import { asyncValidate } from './validation';
 
 class RegisterForm extends Component {
   render() {
@@ -62,4 +63,8 @@ class RegisterForm extends Component {
   }
 }
 
-export default reduxForm({ form: 'register' })(RegisterForm);
+export default reduxForm({
+  form: 'register',
+  asyncValidate: asyncValidate,
+  asyncBlurFields: ['username']
+})(RegisterForm);
