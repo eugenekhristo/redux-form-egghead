@@ -133,3 +133,12 @@ button[type='submit'] {
 .async-validating input {
   animation: gray-pulse 1s infinite;
 }
+
+.field-array-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.field-array-item button {
+  align-self: start;
+}

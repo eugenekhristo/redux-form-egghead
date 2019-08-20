@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Field, reduxForm } from 'redux-form';
+import { Field, reduxForm, FieldArray } from 'redux-form';
 import capitalize from 'capitalize';
 import './register-form.styles.css';
-import { CustomInput, CustomSelect } from './fields/index';
+import { CustomInput, CustomSelect, discounts } from './fields/index';
 import { required, minLength, maxLength, matchesPasswords } from './validation';
 import { asyncValidate } from './validation';
 
@@ -60,6 +60,7 @@ class RegisterForm extends Component {
           component={CustomInput}
           label="Sign up for newsletters?"
         />
+        <FieldArray name="discountCodes" component={discounts} />
         <button type="submit">Submit</button>
       </form>
     );
